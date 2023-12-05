@@ -1,3 +1,20 @@
+Este código es parte de una barra de navegación (Navbar) en una aplicación React que utiliza React Router.
+
+En React, los hooks son funciones especiales que permiten a los componentes de función acceder al estado y a otras características de React. Estas funciones se llaman "hooks" porque permiten "engancharse" al ciclo de vida de los componentes y a otras características de React.
+
+Los Hooks empleados para esto, son los siguientes: 
+
+- useResolvedPath: Esta función toma una ruta y resuelve todas las variables y comodines en la ruta. Devuelve un objeto con las propiedades pathname, search, y hash. Esto es útil para garantizar que las rutas y los enlaces se resuelvan correctamente, incluso si tienen comodines o variables.
+
+- useMatch: Esta función verifica si la ruta actual coincide con la ruta proporcionada. Puedes proporcionar opciones adicionales para ajustar el comportamiento de coincidencia. En este caso, se está utilizando con {path: resolvedPath.pathname, end: true} para verificar si la ruta actual coincide exactamente con la ruta proporcionada y no es parte de una coincidencia más larga.
+
+En el componente CustomLink, estas funciones se utilizan para determinar si el enlace actual es activo. Si es así, se agrega la clase "active" al elemento <li>. Se sombreará de un colorín bonito.
+
+En resumen, useResolvedPath se utiliza para resolver la ruta y useMatch se utiliza para verificar si la ruta actual coincide con la ruta proporcionada.
+
+Próximamente, la barra de navegación pretende estar activa para construir un portfolio de presentación como junior entrépida. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,32 +56,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
